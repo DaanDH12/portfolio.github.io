@@ -154,21 +154,13 @@
 
 }
 
-
-/* about section styling */
+/* alle soortgelijke content styling */
 
 section {
     padding: 100px 0;
-
-
-
 }
 
-.overmij {
-    font-family: 'Poppins', sans-serif;
-}
-
-.overmij .titel {
+section .titel {
     position: relative;
     text-align: center;
     font-size: 40px;
@@ -178,7 +170,7 @@ section {
     font-family: 'Ubuntu', sans-serif;
 }
 
-.overmij .titel::before {
+section .titel::before {
     content: "";
     position: absolute;
     bottom: 0px;
@@ -189,8 +181,7 @@ section {
     transform: translateX(-50%);
 }
 
-.overmij .titel::after {
-    content: "Wie ik ben";
+section .titel::after {
     position: absolute;
     bottom: -12px;
     left: 50%;
@@ -201,7 +192,19 @@ section {
     transform: translateX(-50%);
 }
 
-.overmij .overmij-content {
+
+/* overmij section styling */
+
+.overmij, .kwaliteiten {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.overmij .titel::after{
+content: "Wie ik ben"
+}
+
+.overmij .overmij-content, .kwaliteiten .kwaliteiten-content {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -255,6 +258,60 @@ section {
     background: none;
 }
 
+/* kwaliteiten section styling */
+.kwaliteiten {
+    color: #fff;
+    background: #111;
+}
+
+.kwaliteiten .titel::before {
+    background: #fff;
+}
+
+.kwaliteiten .titel::after {
+    background: #111;
+    content: "Wat ik bied"
+}
+
+.kwaliteiten .kwaliteiten-content .card {
+    width: calc(33% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.kwaliteiten .kwaliteiten-content .card:hover{
+    background: darkcyan;
+}
+
+.kwaliteiten .kwaliteiten-content .card .box {
+    transition: all 0.3s ease;
+}
+
+.kwaliteiten .kwaliteiten-content .card:hover .box {
+    transform: scale(1.05);
+}
+
+.kwaliteiten .kwaliteiten-content .card i {
+    font-size: 50px;
+    color: darkcyan;
+    transition: color 0.3s ease;
+} 
+
+.kwaliteiten .kwaliteiten-content .card:hover i{
+    color: #fff;
+}
+
+.kwaliteiten .kwaliteiten-content .card .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+
+
+}
 
 
 /* responsive media query start */
@@ -366,6 +423,10 @@ section {
     
     .overmij .overmij-content .right {
         flex: 100%;
+    }
+    .kwaliteiten .kwaliteiten-content .card {
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
     }
 }
 
