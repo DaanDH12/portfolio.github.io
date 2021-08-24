@@ -7,6 +7,10 @@
     text-decoration: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .max-width {
     max-width: 1300px;
     padding: 0 80px;
@@ -61,6 +65,7 @@
 
 
 .navbar .menu li a {
+    display: block;
     color: #fff;
     font-size: 18px;
     font-weight: 500;
@@ -130,7 +135,7 @@
 }
 
 .home .home-content .text-3 span {
-    color: darkcyan;
+    color: black;
     font-weight: 500;
 
 }
@@ -158,6 +163,24 @@
 
 section {
     padding: 100px 0;
+}
+
+.overmij,
+.kwaliteiten,
+.vaardigheden,
+.contact,
+footer {
+    font-family: 'Poppins', sans-serif;
+}
+
+.overmij .overmij-content,
+.kwaliteiten .kwaliteiten-content,
+.vaardigheden .vaardigheden-content,
+.contact .contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
 }
 
 section .titel {
@@ -195,20 +218,8 @@ section .titel::after {
 
 /* overmij section styling */
 
-.overmij, .kwaliteiten {
-    font-family: 'Poppins', sans-serif;
-}
-
-
-.overmij .titel::after{
-content: "Wie ik ben"
-}
-
-.overmij .overmij-content, .kwaliteiten .kwaliteiten-content {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
+.overmij .titel::after {
+    content: "Wie ik ben"
 }
 
 .overmij .overmij-content .left {
@@ -283,7 +294,7 @@ content: "Wie ik ben"
     transition: all 0.3s ease;
 }
 
-.kwaliteiten .kwaliteiten-content .card:hover{
+.kwaliteiten .kwaliteiten-content .card:hover {
     background: darkcyan;
 }
 
@@ -299,9 +310,9 @@ content: "Wie ik ben"
     font-size: 50px;
     color: darkcyan;
     transition: color 0.3s ease;
-} 
+}
 
-.kwaliteiten .kwaliteiten-content .card:hover i{
+.kwaliteiten .kwaliteiten-content .card:hover i {
     color: #fff;
 }
 
@@ -309,9 +320,231 @@ content: "Wie ik ben"
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
+}
 
+/* Vaardigheden section styling */
+
+.vaardigheden .titel::after {
+    content: "Wat ik weet";
+}
+
+.vaardigheden .vaardigheden-content .column {
+    width: calc(50% - 30px);
+}
+
+.vaardigheden .vaardigheden-content .left .text {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.vaardigheden .vaardigheden-content .left p {
+    text-align: justify;
+}
+
+.vaardigheden .vaardigheden-content .left a {
+    display: inline-block;
+    background: darkcyan;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 16px;
+    margin-top: 20px;
+    border-radius: 7px;
+    border: 3px solid darkcyan;
+    transition: all 0.3s ease;
+}
+
+.vaardigheden .vaardigheden-content .left a:hover {
+    color: darkcyan;
+    background: none;
+}
+
+.vaardigheden .vaardigheden-content .right .bars {
+    margin-bottom: 15px;
+}
+
+.vaardigheden .vaardigheden-content .right .info {
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.vaardigheden .vaardigheden-content .right span {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.vaardigheden .vaardigheden-content .right .line {
+    height: 5px;
+    width: 100%;
+    background: lightgrey;
+    position: relative;
+}
+
+.vaardigheden .vaardigheden-content .right .line::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: darkcyan;
+}
+
+.vaardigheden-content .right .html::before {
+    width: 80%;
+}
+
+.vaardigheden-content .right .css::before {
+    width: 70%;
+}
+
+.vaardigheden-content .right .javascript::before {
+    width: 20%;
+}
+
+/* contact section styling */
+
+.contact {
+    background: #111;
+    color: #fff;
+}
+
+.contact .titel::before {
+    background: #fff;
+}
+
+.contact .titel::after {
+    content: "Kom in Contact";
+    background-color: #111;
+}
+
+.contact .contact-content .column {
+    width: calc(50% - 30px);
+    color: #fff;
+}
+
+.contact .contact-content .text {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.contact .contact-content .left p {
+    text-align: justify;
 
 }
+
+.contact .contact-content .left .icons {
+    margin: 10px 0;
+}
+
+.contact .contact-content .row {
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+
+.contact .contact-content .row .info {
+    margin-left: 30px;
+}
+
+.contact .contact-content .row i {
+    font-size: 25px;
+    color: darkcyan;
+}
+
+.contact .contact-content .info .head {
+    font-weight: 500;
+}
+
+.contact .contact-content .info .sub-titel {
+    color: #fff;
+}
+
+.contact .right form .velden {
+    display: flex;
+
+}
+
+.contact .right form .veld, 
+.contact .right form .velden .veld {
+  height: 45px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.contact .right form .textarea {
+    height: 80px;
+    width: 100%;
+} 
+
+.contact .right form .naam {
+    margin-right: 10px;
+}
+
+.contact .right form .email {
+    margin-left: 10px;
+}
+
+.contact .right form .veld input,
+.contact .right form .textarea textarea  {
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact .right form .textarea textarea {
+    padding-top: 10px;
+    resize: none;
+}
+
+.contact .right form .button {
+    height: 47px;
+    width: 170px;
+}
+
+.contact .right form .button button {
+    width: 100%;
+    height: 100%;
+    border: 2px solid darkcyan;
+    background: darkcyan;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact .right form .button button:hover {
+    color: darkcyan;
+    background: none;
+}
+
+/* footer section styling */
+
+footer {
+    background: #111;
+    padding: 20px 23px;
+    color: #fff;
+}
+
+footer span a {
+    color: darkcyan;
+    text-decoration: none;
+}
+
+footer span a:hover {
+    text-decoration: underline;
+}
+
 
 
 /* responsive media query start */
@@ -342,9 +575,6 @@ content: "Wie ik ben"
 
     .menu-btn i.active:before {
         content: "\f00d";
-
-
-
     }
 
     .navbar .menu {
@@ -392,7 +622,6 @@ content: "Wie ik ben"
 @media (max-width: 690px) {
     .max-width {
         padding: 0 23px;
-
     }
 
     .home .home-content .text-2 {
@@ -420,13 +649,19 @@ content: "Wie ik ben"
         justify-content: center;
         margin: 0 auto 60px;
     }
-    
+
     .overmij .overmij-content .right {
         flex: 100%;
     }
+
     .kwaliteiten .kwaliteiten-content .card {
-        width: calc(50% - 10px);
-        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .vaardigheden .vaardigheden-content .column,
+    .contact .contact-content .column {
+        width: 100%;
+        margin-bottom: 35px;
     }
 }
 
