@@ -7,12 +7,30 @@ $(document).ready(function () {
 
         }
     })
+
+    $(document).ready(function () {
+        $(window).scroll(function () {
+            if (this.scrollY > 20) {
+                $('.navbarportfolio').addClass("sticky");
+            } else {
+                $('.navbarportfolio').removeClass("sticky");
+    
+            }
+        })
+
+
     // toggle menu navbar script
 
     $('.menu-btn').click(function () {
         $('.navbar .menu').toggleClass("active");
         $('.menu-btn i').toggleClass("active");
     });
+});
+
+$('.menu-btn').click(function () {
+    $('.navbarportfolio .menu').toggleClass("active");
+    $('.menu-btn i').toggleClass("active");
+});
 });
 
 // typing animation script
