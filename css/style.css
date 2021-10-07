@@ -100,7 +100,7 @@ border-radius: 10px;
     padding: 30px 0;
     font-family: 'Ubuntu', sans-serif;
     transition: all 0.3s ease;
-    background-color: #111;
+    background-color: darkcyan;
 }
 
 .navbarportfolio.sticky {
@@ -122,7 +122,7 @@ border-radius: 10px;
 }
 
 .navbarportfolio .logo a span {
-    color: darkcyan;
+    color: white;
     transition: all 0.3s ease;
 }
 
