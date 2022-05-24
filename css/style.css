@@ -849,6 +849,14 @@ link:focus {
     }
   }
 
+  ::-webkit-scrollbar {
+      background-color: #111;
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background-color: darkcyan;
+  }
+
 @media (max-width: 690px) {
     .max-width {
         padding: 0 23px;
