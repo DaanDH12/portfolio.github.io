@@ -1,0 +1,915 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+/* navbar styling */
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky {
+    padding: 15px 0;
+    background: darkcyan;
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.navbar .logo a {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.navbar .logo a span {
+    color: darkcyan;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky .logo a span {
+    color: #fff;
+
+
+}
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+
+}
+
+
+
+.navbar .menu li a {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+
+
+
+.navbar .menu li a:hover {
+    color: darkcyan;
+}
+
+.navbar.sticky .menu li a:hover {
+    color: #fff;
+}
+
+.portfoliomenu {
+
+padding: 10px 20px;
+background-color: #111;
+border-radius: 10px;
+
+}
+
+/* navbar projecten styling */
+
+.navbarportfolio {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+    background-color: darkcyan;
+}
+
+.navbarportfolio.sticky {
+    padding: 15px 0;
+    background: darkcyan;
+}
+
+.navbarportfolio .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.navbarportfolio .logo a {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.navbarportfolio .logo a span {
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.navbarportfolio.sticky .logo a span {
+    color: #fff;
+
+
+}
+
+.navbarportfolio .menu li {
+    list-style: none;
+    display: inline-block;
+
+}
+
+
+
+.navbarportfolio .menu li a {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+
+
+
+.navbarportfolio .menu li a:hover {
+    color: darkcyan;
+}
+
+.navbarportfolio.sticky .menu li a:hover {
+    color: #fff;
+
+}
+
+/* menu btn styling */
+
+.menu-btn {
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+
+}
+
+
+
+/* home section styling */
+
+.home {
+
+    display: flex;
+    background: url(../images/banneroefening4.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.home .max-width {
+
+    margin: auto 0 auto 40px;
+
+
+}
+
+.home .home-content .text-1 {
+    font-size: 27px;
+}
+
+.home .home-content .text-2 {
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+
+.home .home-content .text-3 {
+    font-size: 40px;
+    margin: 5px 0;
+}
+
+.home .home-content .text-3 span {
+    color: black;
+    font-weight: 500;
+
+}
+
+.home .home-content a {
+    display: inline-block;
+    background: #111;
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 7px;
+    border: 3px solid #111;
+    transition: all 0.3s ease;
+}
+
+.home .home-content a:hover {
+    color: #111;
+    background: none;
+
+
+}
+
+/* alle soortgelijke content styling */
+
+section {
+    padding: 100px 0;
+}
+
+.overmij,
+.kwaliteiten,
+.vaardigheden,
+.contact,
+footer {
+    font-family: 'Poppins', sans-serif;
+}
+
+.overmij .overmij-content,
+.kwaliteiten .kwaliteiten-content,
+.vaardigheden .vaardigheden-content,
+.contact .contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section .titel {
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+section .titelportfolio {
+    position: relative;
+    text-align: left;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+section .titel::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 170px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+
+section .titel::after {
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 20px;
+    color: darkcyan;
+    padding: 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+
+/* overmij section styling */
+
+.overmij .titel::after {
+    content: "Wie ik ben"
+}
+
+.overmij .overmij-content .left {
+    width: 45%;
+}
+
+.overmij .overmij-content .left img {
+    height: 450px;
+    width: 450x;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.overmij .overmij-content .right {
+    width: 55%;
+}
+
+.overmij .overmij-content .right .text {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.overmij .overmij-content .right .text span {
+    color: darkcyan;
+}
+
+.overmij .overmij-content .right p {
+    text-align: justify;
+}
+
+.overmij .overmij-content .right a {
+    display: inline-block;
+    background: darkcyan;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 7px;
+    border: 3px solid darkcyan;
+    transition: all 0.3s ease;
+}
+
+.overmij .overmij-content .right a:hover {
+    color: darkcyan;
+    background: none;
+}
+
+/* kwaliteiten section styling */
+.kwaliteiten {
+    color: #fff;
+    background: #111;
+}
+
+.kwaliteiten .titel::before {
+    background: #fff;
+}
+
+.kwaliteiten .titel::after {
+    background: #111;
+    content: "Wat ik bied"
+}
+
+.kwaliteiten .kwaliteiten-content .card {
+    width: calc(33% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.kwaliteiten .kwaliteiten-content .card:hover {
+    background: darkcyan;
+}
+
+.kwaliteiten .kwaliteiten-content .card .box {
+    transition: all 0.3s ease;
+}
+
+.kwaliteiten .kwaliteiten-content .card:hover .box {
+    transform: scale(1.05);
+}
+
+.kwaliteiten .kwaliteiten-content .card i {
+    font-size: 50px;
+    color: darkcyan;
+    transition: color 0.3s ease;
+}
+
+.kwaliteiten .kwaliteiten-content .card:hover i {
+    color: #fff;
+}
+
+.kwaliteiten .kwaliteiten-content .card .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+/* Vaardigheden section styling */
+
+.vaardigheden .titel::after {
+    content: "Wat ik weet";
+}
+
+.vaardigheden .vaardigheden-content .column {
+    width: calc(50% - 30px);
+}
+
+.vaardigheden .vaardigheden-content .left .text {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.vaardigheden .vaardigheden-content .left p {
+    text-align: justify;
+}
+
+.vaardigheden .vaardigheden-content .left a {
+    display: inline-block;
+    background: darkcyan;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 16px;
+    margin-top: 20px;
+    border-radius: 7px;
+    border: 3px solid darkcyan;
+    transition: all 0.3s ease;
+}
+
+.vaardigheden .vaardigheden-content .left a:hover {
+    color: darkcyan;
+    background: none;
+}
+
+.vaardigheden .vaardigheden-content .right .bars {
+    margin-bottom: 15px;
+}
+
+.vaardigheden .vaardigheden-content .right .info {
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.vaardigheden .vaardigheden-content .right span {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.vaardigheden .vaardigheden-content .right .line {
+    height: 5px;
+    width: 100%;
+    background: lightgrey;
+    position: relative;
+}
+
+.vaardigheden .vaardigheden-content .right .line::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: darkcyan;
+}
+
+.vaardigheden-content .right .html::before {
+    width: 80%;
+}
+
+.vaardigheden-content .right .css::before {
+    width: 70%;
+}
+
+.vaardigheden-content .right .javascript::before {
+    width: 20%;
+}
+
+/* contact section styling */
+
+.contact {
+    background: #111;
+    color: #fff;
+}
+
+.contact .titel::before {
+    background: #fff;
+}
+
+.contact .titel::after {
+    content: "Kom in Contact";
+    background-color: #111;
+}
+
+.contact .contact-content .column {
+    width: calc(50% - 30px);
+    color: #fff;
+}
+
+.contact .contact-content .text {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.contact .contact-content .left p {
+    text-align: justify;
+
+}
+
+.contact .contact-content .left .icons {
+    margin: 10px 0;
+}
+
+.contact .contact-content .row {
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+
+.contact .contact-content .row .info {
+    margin-left: 30px;
+}
+
+.contact .contact-content .row i {
+    font-size: 25px;
+    color: darkcyan;
+}
+
+.contact .contact-content .info .head {
+    font-weight: 500;
+}
+
+.contact .contact-content .info .sub-titel {
+    color: #fff;
+}
+
+.darkcyanbox {
+    padding: 10px;
+    background-color: darkcyan;
+    border-radius: 10px;
+}
+
+.linkedinlink {
+    color: white;
+    text-decoration: underline;
+}
+
+.linkedinlink:hover {
+    text-decoration: underline;
+}
+
+
+
+
+/* footer section styling */
+
+footer {
+    background: #111;
+    padding: 20px 23px;
+    color: #fff;
+}
+
+footer span a {
+    color: darkcyan;
+    text-decoration: none;
+}
+
+footer span a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* responsive media query start */
+@media (max-width: 1300px) {
+    .home .max-width {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 1104px) {
+    .overmij .overmij-content .left img {
+        height: 350px;
+        width: 350x;
+    }
+}
+
+@media (max-width: 991px) {
+    .max-width {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 947px) {
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+
+    .menu-btn i.active:before {
+        content: "\f00d";
+    }
+
+    .navbar .menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease
+    }
+
+    .navbar .menu.active {
+        left: 0;
+
+
+    }
+
+    .navbar .menu li {
+        display: block;
+    }
+
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+
+    .navbarportfolio .menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease
+    }
+
+    .navbarportfolio .menu.active {
+        left: 0;
+
+
+    }
+
+    .navbarportfolio .menu li {
+        display: block;
+    }
+
+    .navbarportfolio .menu li a {
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+
+    .home .home-content .text-2 {
+        font-size: 70px;
+    }
+
+    .home .home-content .text-3 {
+        font-size: 35px;
+    }
+
+    .home .home-content a {
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+}
+
+/* Portfolio Sectie */
+
+.portfolio  {
+    padding-top: 150px;
+    margin-bottom: -150px;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: left;
+}
+
+
+.portfolio .titel::after {
+    content: "Mijn projecten";
+    text-align: left;
+}
+
+.link:visited {
+    background-color: transparent;
+    text-decoration: none;
+    color: darkcyan;
+}
+
+.link:link {
+    background-color: transparent;
+    color: darkcyan;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+    color: darkcyan;
+}
+
+link:focus { 
+    text-decoration: none; 
+    color: darkcyan; 
+}
+
+
+
+/* Tijdlijn Projecten */
+
+  .timeline {
+    background-color: white;
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    position: relative;
+    max-width: 1500px;
+    margin: 0 auto;
+    
+  }
+  
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: darkcyan;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+  .container {
+    padding: 10px 50px;
+    position: relative;
+    background-color: white;
+    width: 50%;
+  }
+  
+
+  .container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid darkcyan;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  
+  .links {
+    left: 0;
+  }
+  
+  .rechts {
+    left: 50%;
+  }
+  
+  .links::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid darkcyan;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent darkcyan;
+  }
+  
+  .rechts::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid darkcyan;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent darkcyan transparent transparent;
+  }
+  
+  .rechts::after {
+    left: -16px;
+  }
+  
+  .content {
+    box-shadow: 5px 5px black;
+    padding: 20px 30px;
+    background-color: #222;
+    position: relative;
+    border-radius: 10px;
+    border-color: darkcyan;
+    text-align: left;
+  }
+
+  .timelinepictures {
+    padding: 10px 10px 10px 10px;
+    position: relative;
+    width: 100%;
+    border-radius: 15px;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .timeline::after {
+      left: 31px;
+    }
+  
+    .container {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+    }
+  
+    .container::before {
+      left: 60px;
+      border: medium solid darkcyan;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent darkcyan transparent transparent;
+    }
+  
+    .links::after, .right::after {
+      left: 15px;
+    }
+  
+    .rechts {
+      left: 0%;
+    }
+  }
+
+  ::-webkit-scrollbar {
+      background-color: #111;
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background-color: darkcyan;
+  }
+
+@media (max-width: 690px) {
+    .max-width {
+        padding: 0 23px;
+    }
+
+    .home .home-content .text-2 {
+        font-size: 60px;
+    }
+
+    .home .home-content .text-3 {
+        font-size: 32px;
+    }
+
+    .home .home-content a {
+        font-size: 20px;
+    }
+
+    .max-width {
+        max-width: 800px;
+    }
+
+    .overmij .overmij-content .column {
+        width: 100%;
+    }
+
+    .overmij .overmij-content .left {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+
+    .overmij .overmij-content .right {
+        flex: 100%;
+    }
+
+    .kwaliteiten .kwaliteiten-content .card {
+        width: 100%;
+    }
+
+    .vaardigheden .vaardigheden-content .column,
+    .contact .contact-content .column {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
+
+@media (max-width: 500px) {
+    .home .home-content .text-2 {
+        font-size: 50px;
+    }
+
+    .home .home-content .text-3 {
+        font-size: 27px;
+    }
+
+}
