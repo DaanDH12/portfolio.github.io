@@ -23,10 +23,8 @@ function loadSheetsAPI() {
       var fillPercentage = Math.min(noCount / 6, 1); // Bereken het vulpercentage, maximaal 1
   
       var progressBarHeight = fillPercentage * 100 + '%';
-      var progressBarBottom = 100 - (fillPercentage * 100) + '%';
   
       progressBar.style.height = progressBarHeight;
-      progressBar.style.bottom = progressBarBottom;
       progressBar.style.backgroundColor = 'rgba(0, 128, 0, ' + fillPercentage + ')'; // Maak de kleur groener op basis van het vulpercentage
     }, function(reason) {
       console.error('Fout: ' + reason.result.error.message);
