@@ -7,7 +7,7 @@ function loadSheetsAPI() {
   function fetchSheetData() {
     gapi.client.sheets.spreadsheets.values.get({
       spreadsheetId: '1770623299', // Vervang met je eigen Spreadsheet ID
-      range: 'Sheet1!B:B', // Vervang met het bereik van de kolom waarin de 'nee'-waarden staan
+      range: 'B:B', // Vervang met het bereik van de kolom waarin de 'nee'-waarden staan
       headers: {
         'Access-Control-Allow-Origin': '*',
       }
@@ -28,7 +28,7 @@ function loadSheetsAPI() {
         progressBar.style.width = (yesCount / 6) * 100 + '%';
       }
     }, function(reason) {
-      console.error('Error: ' + reason.result.error.message);
+      console.error(`Error: ${reason.result.error.message}`);
     });
   }
 
