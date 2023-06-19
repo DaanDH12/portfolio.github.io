@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(to bottom, #9c9a9a, #3f3e3e);
+    background: linear-gradient(to bottom, #089beb, #042641);
     margin: 0;
     padding: 0;
     display: flex;
@@ -7,17 +7,36 @@ body {
     align-items: center;
     height: 100vh;
   }
+
+  h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    margin-right: -10px;
+  }
+
+  p {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .tekst {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+  }
   
   .progress-bar-container {
-    width: 75px;
+    width: 60%;
     height: 600px;
-    background-color: #f0f0f0;
-    border-radius: 5px;
-    overflow: hidden;
+    background-image: url('beer.svg'); /* Vervang 'beer-glass.svg' met de locatie van jouw eigen SVG-bestand */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    transition: height 0.3s ease-in-out;
   }
   
   .glass-bar {
-    width: 100%;
+    width: 60%;
     height: 600px;
     transform-origin: right top;
   }
