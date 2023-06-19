@@ -7,28 +7,25 @@ function loadSheetsAPI() {
   function fetchSheetData() {
     gapi.client.sheets.spreadsheets.values.get({
       spreadsheetId: '1p8Uc3wcJXZXixLIjaPooNhdArAacYIAZ7idmfXRFnWk', // Vervang met je eigen Spreadsheet ID
-      range: 'Sheet1!B:B' // Vervang met het bereik van de kolom waarin de 'ja'/'nee'-waarden staan
+      range: 'Sheet1!B:B' // Vervang met het bereik van de kolom waarin de 'ja'/'Nee'-waarden staan
     }).then(function(response) {
       var data = response.result.values;
       var rowCount = data.length;
   
       var noCount = 0;
       for (var i = 0; i < rowCount; i++) {
-        if (data[i][0] === 'nee') {
+        if (data[i][0] === 'Nee') {
           noCount++;
         }
       }
   
       var progressBar = document.querySelector('.progress-bar');
-      if (noCount === 6) {
-        progressBar.style.width = '100%';
-        progressBar.style.backgroundColor = 'green';
-      } else {
-        progressBar.style.width = (noCount / 6) * 100 + '%';
-        progressBar.style.backgroundColor = '#ffcc00';
-      }
+      var fillPercentage = Math.min(noCount / 6, 1); // Bereken het vulpercentage, maximaal 1
+  
+      progressBar.style.width = fillPercentage * 100 + '%';
+      progressBar.style.backgroundColor = 'green';
     }, function(reason) {
-      console.error('Error: ' + reason.result.error.message);
+      console.error('Fout: ' + reason.result.error.message);
     });
   }
   
@@ -38,5 +35,4 @@ function loadSheetsAPI() {
       apiKey: 'AIzaSyDcpFXMiROdpf7cKUYoI8zh2F3-mJKZO_c' // Vervang met je eigen API-sleutel
     }).then(loadSheetsAPI);
   });
-  
   
