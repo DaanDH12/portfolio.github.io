@@ -19,7 +19,7 @@ function loadSheetsAPI() {
         }
       }
   
-      var progressBar = document.querySelector('.progress-bar-container');
+      var progressBar = document.querySelector('.glass-bar');
       var fillPercentage = Math.min(noCount / 6, 1); // Bereken het vulpercentage, maximaal 1
   
       progressBar.style.width = fillPercentage * 100 + '%';
