@@ -1,4 +1,4 @@
-// Functie om de Google Sheets API te laden
+ // Functie om de Google Sheets API te laden
 function loadSheetsAPI() {
     gapi.client.load('sheets', 'v4', fetchSheetData);
   }
@@ -23,7 +23,7 @@ function loadSheetsAPI() {
       var fillPercentage = Math.min(noCount / 6, 1); // Bereken het vulpercentage, maximaal 1
   
       progressBar.style.width = fillPercentage * 100 + '%';
-      progressBar.style.backgroundColor = 'green';
+      progressBar.style.backgroundColor = 'rgba(0, 128, 0, ' + fillPercentage + ')'; // Maak de kleur groener op basis van het vulpercentage
     }, function(reason) {
       console.error('Fout: ' + reason.result.error.message);
     });
