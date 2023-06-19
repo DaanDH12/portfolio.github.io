@@ -6,8 +6,8 @@ function loadSheetsAPI() {
   // Functie om gegevens op te halen uit de Google Sheet
   function fetchSheetData() {
     gapi.client.sheets.spreadsheets.values.get({
-      spreadsheetId: '1770623299', // Vervang met je eigen Spreadsheet ID
-      range: 'B2:B29', // Vervang met het bereik van de kolom waarin de 'nee'-waarden staan
+      spreadsheetId: '1p8Uc3wcJXZXixLIjaPooNhdArAacYIAZ7idmfXRFnWk', // Vervang met je eigen Spreadsheet ID
+      range: 'B:B', // Vervang met het bereik van de kolom waarin de 'nee'-waarden staan
       headers: {
         'Access-Control-Allow-Origin': '*',
       }
