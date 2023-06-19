@@ -7,7 +7,7 @@ function loadSheetsAPI() {
   function fetchSheetData() {
     gapi.client.sheets.spreadsheets.values.get({
       spreadsheetId: '1770623299', // Vervang met je eigen Spreadsheet ID
-      range: 'B:B', // Vervang met het bereik van de kolom waarin de 'nee'-waarden staan
+      range: 'B2:B29', // Vervang met het bereik van de kolom waarin de 'nee'-waarden staan
       headers: {
         'Access-Control-Allow-Origin': '*',
       }
