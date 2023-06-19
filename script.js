@@ -7,7 +7,7 @@ function loadSheetsAPI() {
   function fetchSheetData() {
     gapi.client.sheets.spreadsheets.values.get({
       spreadsheetId: '1p8Uc3wcJXZXixLIjaPooNhdArAacYIAZ7idmfXRFnWk', // Vervang met je eigen Spreadsheet ID
-      range: 'Sheet1!B:B' // Vervang met het bereik van de kolom waarin de 'ja'/'Nee'-waarden staan
+      range: 'B:B' // Vervang met het bereik van de kolom waarin de 'ja'/'Nee'-waarden staan
     }).then(function(response) {
       var data = response.result.values;
       var rowCount = data.length;
