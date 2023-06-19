@@ -20,15 +20,18 @@ function loadSheetsAPI() {
       }
   
       var progressBar = document.querySelector('.glass-bar');
-    var fillPercentage = Math.min(noCount / 6, 1); // Bereken het vulpercentage, maximaal 1
-
-    var innerProgressBar = progressBar.querySelector('.glass-bar');
-    innerProgressBar.style.transform = 'scaleY(' + fillPercentage + ')';
-    progressBar.style.backgroundColor = 'rgba(0, 128, 0, ' + fillPercentage + ')'; // Maak de kleur groener op basis van het vulpercentage
-  }, function(reason) {
-    console.error('Fout: ' + reason.result.error.message);
-  });
-}
+      var fillPercentage = Math.min(noCount / 6, 1); // Bereken het vulpercentage, maximaal 1
+  
+      var progressBarHeight = fillPercentage * 100 + '%';
+      var progressBarTop = 100 - (fillPercentage * 100) + '%';
+  
+      progressBar.style.height = progressBarHeight;
+      progressBar.style.top = progressBarTop;
+      progressBar.style.backgroundColor = 'rgba(0, 128, 0, ' + fillPercentage + ')'; // Maak de kleur groener op basis van het vulpercentage
+    }, function(reason) {
+      console.error('Fout: ' + reason.result.error.message);
+    });
+  }
   
   // Initialisatie van de Google Sheets API
   gapi.load('client', function() {
