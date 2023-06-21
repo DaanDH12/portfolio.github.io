@@ -21,16 +21,15 @@ function fetchSheetData() {
     var rowCount = data.length;
 
     var textFragments = ['Elke keer als je een avond niet gedronken hebt, vult de progressbar hieronder zich! Als die helemaal vol zit zul je rijkelijk beloond worden Tim!', 'Lekker bezig Timmetje, al 2 avonden op rij niet gedronken! Je weet wat dat betekent.. De beloning komt dichterbij', 'Tim, wat een kanonskogel! Voel je je al fitter?', 'Tim, Tim, absolute animal! Ik ben ervan overtuigd dat je het gaat halen!', 'Gefeliciteerd Tim, jij hebt die beloning zeker verdiend! Je krijgt van mij een lekker pilsje binnenkort om dit te vieren!']; // Voeg hier de verschillende tekstfragmenten toe
-    var currentFragmentIndex = 0; // Index van het huidige tekstfragment
+    var currentFragmentIndex = 1; // Index van het huidige tekstfragment
 
     for (var i = 0; i < rowCount; i++) {
       if (data[i][0] === 'Nee') {
-        currentIndex = (currentIndex + 1) % textFragments.length; // Wissel naar het volgende tekstfragment
+        currentFragmentIndex = (currentFragmentIndex + 1) % textFragments.length; // Wissel naar het volgende tekstfragment
+        changeText('result-text', textFragments[currentFragmentIndex]); // Verander 'result-text' naar het id van het element waarin je de tekst wilt wijzigen
         break; // Stop de lus zodra een 'Nee'-waarde wordt gevonden (als je maar één tekstfragment per keer wilt weergeven)
       }
     }
-
-    changeText('result-text', textFragments[currentIndex]); // Verander 'result-text' naar het id van het element waarin je de tekst wilt wijzigen
 
     var progressBar = document.querySelector('.glass-bar');
     var fillPercentage = Math.min(currentFragmentIndex / (textFragments.length - 1), 1); // Bereken het vulpercentage op basis van het huidige fragment
