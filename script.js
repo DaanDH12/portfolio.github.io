@@ -25,11 +25,12 @@ function fetchSheetData() {
 
     for (var i = 0; i < rowCount; i++) {
       if (data[i][0] === 'Nee') {
-        currentFragmentIndex = (currentFragmentIndex + 1) % textFragments.length; // Wissel naar het volgende tekstfragment
-        changeText('result-text', textFragments[currentFragmentIndex]); // Verander 'result-text' naar het id van het element waarin je de tekst wilt wijzigen
+        currentIndex = (currentIndex + 1) % textFragments.length; // Wissel naar het volgende tekstfragment
         break; // Stop de lus zodra een 'Nee'-waarde wordt gevonden (als je maar één tekstfragment per keer wilt weergeven)
       }
     }
+
+    changeText('result-text', textFragments[currentIndex]); // Verander 'result-text' naar het id van het element waarin je de tekst wilt wijzigen
 
     var progressBar = document.querySelector('.glass-bar');
     var fillPercentage = Math.min(currentFragmentIndex / (textFragments.length - 1), 1); // Bereken het vulpercentage op basis van het huidige fragment
